@@ -1,0 +1,67 @@
+#nav__p__error {
+    padding-top: 2rem;
+    color: white;
+    background-color: darkred;
+}
+
+#nav__p__success {
+    padding-top: 2rem;
+    color: black;
+    background-color: greenyellow;
+}
+
+#nav__p__default {
+    padding-top: 2rem;
+    color: black;
+    background-color: inherit;
+}
+
+#nav__div {
+    font-size: 1.4rem;
+    float: right;
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    border-radius: 0.3rem;
+}
+
+#nav__div p {
+    font-size: 1.4rem;
+    float: right;
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    border-radius: 0.3rem;
+}
+
+#nav__div p button {
+    font-size: 1.2rem;
+    padding-left: 0.5rem;
+    border: none;
+    background: inherit;
+}
+
+.post__h1 {
+    font-family: 'Tahoma';
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.form__post {
+    text-align: center;
+}
+
+.form__post textarea{
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: 2px solid purple;
+    width: min(70%, 800px);
+    background: inherit;
+}
+
+.form__post button {
+    margin-top: 1rem;
+    padding: 0.3rem 1.1rem;
+    font-size: 2rem;
+    border: none;
+    background-color: #dda15e;
+    border-radius: 0.4rem;
+}

@@ -1,0 +1,33 @@
+{% extends "allHomeBase.html" %}
+
+{% block title %}
+    Proctor Home Page
+{% endblock title %}
+
+{% block nav %}
+    <a href="/proctorHome" class="nav__a">Home</a>
+    <a href="/proctorPageMessageHistory" class="nav__a">Messages</a>
+    <!-- <a href="#hostelProblems" class="nav__a">Arrived Complaints</a> -->
+    <a href="/logout" class="nav__a">Logout</a>
+{% endblock nav %}
+
+{% block main %}
+    {% for complaint in complaints|reverse %}
+        <section class="complaint__card">
+            <section class="complaint__content">
+                <p class="complaint__by">
+                    {{complaint.student.registrationId}}
+                    <a class="messagetoComplaint" href="/messageStudent/{{complaint.id}}">Reply Student</a>
+                    <br>
+                    <a class="messagetoComplaint" href="/forwardWarden/{{complaint.id}}">Forward to Warden</a>
+                </p>
+                <p class="complaint__text">
+                    {{complaint.text}}
+                </p>
+                <p class="complaint__date">
+                    {{complaint.date_created}}
+                </p>
+            </section>
+        </section>
+    {% endfor %}
+{% endblock main %}

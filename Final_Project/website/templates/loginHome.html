@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/loginStyles.css') }}">
+{% endblock stylesheet %}
+
+{% block title %}
+    Login Page
+{% endblock title %}
+
+{% block header %}
+    <h1>Hosteller Care Management</h1>
+{% endblock header %}
+
+{% block main %}
+    <h2>Please specify your position to login.</h2>
+    <section>
+        <button type="submit"><a href="/studentLogin">STUDENT</a></button>
+        <button type="submit"><a href="/proctorLogin">PROCTOR</a></button>
+        <button type="submit"><a href="/wardenLogin">WARDEN</a></button>
+    </section>
+{% endblock main %}

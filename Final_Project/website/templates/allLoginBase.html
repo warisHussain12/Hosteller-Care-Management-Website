@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/allLoginStyles.css') }}">
+{% endblock stylesheet %}
+
+
+{% block header %}
+    {% block nav %}{% endblock nav %}
+    <h1>Hosteller Care Management</h1>
+    <h2 class="baseLogin__h2"><a href="/loginHome"><i class="fa-solid fa-arrow-left"></i></a></h2>
+{% endblock header %}

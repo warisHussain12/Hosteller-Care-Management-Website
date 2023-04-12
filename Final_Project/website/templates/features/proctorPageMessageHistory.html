@@ -1,0 +1,30 @@
+<!-- for proctor -->
+{% extends "./home/proctorHome.html" %}
+
+{% block title %}
+    Message History
+{% endblock title %}
+
+{% block main %}
+    {% for message in messages|reverse %}
+        {% if user.id == message.author %}
+            <section class="complaint__card">
+                <section class="complaint__content">
+                    <p class="complaint__by">
+                        {% for complaint in complaints %}
+                            {% if message.complaintId == complaint.id %}
+                                {{complaint.student.registrationId}}
+                            {% endif %}
+                        {% endfor %}
+                    </p>
+                    <p class="complaint__text">
+                        {{message.message}}
+                    </p>
+                    <p class="complaint__date">
+                        {{message.date_created}}
+                    </p>
+                </section>
+            </section>
+        {% endif %}
+    {% endfor %}
+{% endblock main %}

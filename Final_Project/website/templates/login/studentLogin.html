@@ -1,0 +1,25 @@
+{% extends "allLoginBase.html" %}
+
+{% block title %}
+    Student Login Page
+{% endblock title %}
+
+{% block main %}
+    <h2>Please enter your registration ID and password.</h2>
+    <section>
+        <form method="POST">
+            <p>
+                <label for="registrationId">Registration ID:</label>
+                <input type="text" name="registrationId" id="registrationId" placeholder=""
+                autocomplete="off"
+                required>
+            </p>
+            <p>
+                <label for="password">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password:</label>
+                <input type="password" name="password" id="password" placeholder=""
+                required>
+            </p>
+                <button type="submit">Login</button>
+        </form>
+    </section>
+{% endblock main %}

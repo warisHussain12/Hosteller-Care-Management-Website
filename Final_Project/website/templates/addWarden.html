@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h1>Add Warden</h1>
+<br>
+<form method="POST">
+    <label for="wardenId">Warden ID<br>
+        <input type="text" id="wardenId" name="wardenId">
+    </label>
+    <br>
+    <label for="password">Password <br>
+        <input type="text" id="password" name="password">
+    </label>
+    <br><br>
+    <input type="submit" placeholder="Submit">
+</form>
+{% endblock main %}

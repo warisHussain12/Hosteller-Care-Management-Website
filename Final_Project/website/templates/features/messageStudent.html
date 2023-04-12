@@ -1,0 +1,14 @@
+{% extends "./home/proctorHome.html" %}
+
+{% block title %}
+    Message Student Page
+{% endblock title %}
+
+{% block main %}
+    <h1 class="post__h1">Send Message to Student</h1>
+    <form method="POST" class="form__post">
+        <textarea name="message-text" id="message-text" cols="70" rows="10"></textarea>
+        <br>
+        <button type="submit">Send</button>
+    </form>
+{% endblock main %}

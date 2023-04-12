@@ -1,0 +1,24 @@
+{% extends "./home/wardenHome.html" %}
+
+{% block title %}
+    Warden Page
+{% endblock title %}
+
+{% block main %}
+    {% for complaint in complaints|reverse %}
+        <section class="complaint__card">
+            <section class="complaint__content">
+                <p class="complaint__by">
+                    {{complaint.student.registrationId}}
+                    <a class="messagetoComplaint" href="">Mark as Seen</a>
+                </p>
+                <p class="complaint__text">
+                    {{complaint.text}}
+                </p>
+                <p class="complaint__date">
+                    {{complaint.date_created}}
+                </p>
+            </section>
+        </section>
+    {% endfor %}
+{% endblock main %}

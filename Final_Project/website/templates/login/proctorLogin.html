@@ -1,0 +1,25 @@
+{% extends "allLoginBase.html" %}
+
+{% block title %}
+    Proctor Login Page
+{% endblock title %}
+
+{% block main %}
+    <h2>Please enter your Proctor ID and password.</h2>
+    <section>
+        <form method="POST">
+            <p>
+                <label for="proctorId">Proctor ID:</label>
+                <input type="text" name="proctorId" id="proctorId" placeholder=""
+                autocomplete="off"
+                required>
+            </p>
+            <p>
+                <label for="password">&nbsp;&nbsp;Password:</label>
+                <input type="password" name="password" id="password" placeholder=""
+                required>
+            </p>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+{% endblock main %}

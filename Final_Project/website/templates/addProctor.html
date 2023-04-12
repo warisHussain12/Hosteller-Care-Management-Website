@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h1>Add Proctor</h1>
+<br>
+<form method="POST">
+    <label for="proctorId">Proctor ID<br>
+        <input type="text" id="proctorId" name="proctorId">
+    </label>
+    <br>
+    <label for="password">Password <br>
+        <input type="text" id="password" name="password">
+    </label>
+    <br><br>
+    <input type="submit" placeholder="Submit">
+</form>
+{% endblock main %}

@@ -1,0 +1,51 @@
+{% extends "allHomeBase.html" %}
+
+{% block title %}
+    Student Home Page
+{% endblock title %}
+
+{% block nav %}
+    <a href="/studentHome" class="nav__a">Home</a>
+    <a href="/studentPageMessageHistory" class="nav__a">Messages</a>
+    <!-- <a href="#leaveRequest" class="nav__a">Raise Leave Request</a> -->
+    <!-- <a href="#otherRequest" class="nav__a">Request a facility</a> -->
+    <a href="/raiseComplaint" class="nav__a">Raise your Complaint</a>
+    <a href="/logout" class="nav__a">Logout</a>
+{% endblock nav %}
+
+{% block main %}
+    {% for complaint in complaints|reverse %}
+        {% if user.id == complaint.author %}
+            <section class="complaint__card">
+                <section class="complaint__content">
+                    <p class="complaint__text">
+                        <h2 style="text-decoration: underline; font-size: 1.2rem">Your Complaint</h2>
+                        {{complaint.text}}
+                    </p>
+                    <p class="complaint__date">
+                        {{complaint.date_created}}
+                    </p>
+                    <br>
+                    <hr>
+                    <br>
+                    {% if messages|length > 0 %}
+                        {% for message in messages|reverse %}
+                                {% if message.complaintId == complaint.id %}
+                                <h2 style="font-size: 1.2rem">You got a reply from your Proctor</h2>
+                                            <!-- <p class="complaint__by">
+                                                {{message.proctor.proctorId}}
+                                            </p> -->
+                                            <p class="complaint__text">
+                                                {{message.message}}
+                                            </p>
+                                            <p class="complaint__date">
+                                                {{message.date_created}}
+                                            </p>
+                                {% endif %} 
+                        {% endfor %}
+                    {% endif %}
+                </section>
+            </section>
+        {% endif %}
+    {% endfor %}
+{% endblock main %}

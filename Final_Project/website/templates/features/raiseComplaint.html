@@ -1,0 +1,14 @@
+{% extends "./home/studentHome.html" %}
+
+{% block title %}
+    Complaint Page
+{% endblock title %}
+
+{% block main %}
+    <h1 class="post__h1">Raise your complaint</h1>
+    <form method="POST" class="form__post">
+        <textarea name="complaint-text" id="complaint-text" cols="70" rows="10"></textarea>
+        <br>
+        <button type="submit">Raise</button>
+    </form>
+{% endblock main %}

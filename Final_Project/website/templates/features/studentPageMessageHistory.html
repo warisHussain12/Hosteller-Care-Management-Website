@@ -1,0 +1,27 @@
+{% extends "./home/studentHome.html" %}
+
+{% block title %}
+    Message History
+{% endblock title %}
+
+{% block main %}
+    {% for message in messages|reverse %}
+        {% for complaint in user.complaints %}
+            {% if message.complaintId == complaint.id %}
+                <section class="complaint__card">
+                    <section class="complaint__content">
+                        <p class="complaint__by">
+                            {{message.proctor.proctorId}}
+                        </p>
+                        <p class="complaint__text">
+                            {{message.message}}
+                        </p>
+                        <p class="complaint__date">
+                            {{message.date_created}}
+                        </p>
+                    </section>
+                </section>
+            {% endif %}    
+        {% endfor %}
+    {% endfor %}
+{% endblock main %}

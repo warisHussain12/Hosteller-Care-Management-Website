@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+{% endblock title %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/allHomeStyles.css') }}">
+{% endblock stylesheet  %}
+
+{% block header %}
+    <nav class="nav">
+        {% block nav %}
+        {% endblock nav %}
+    </nav>
+{% endblock header %}
+
+{% block main %}
+{% endblock main %}

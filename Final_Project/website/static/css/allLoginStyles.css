@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Roboto+Mono:ital@0;1&display=swap');
+
+* {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: papayawhip;
+    /* background: linear-gradient(to right, blue
+    , black); */
+}
+
+h1 {
+    border-bottom: 2px solid rgb(0, 128, 0);
+    text-align: center;
+    /* background-color: hsla(120, 54%, 46%, 0.696);
+     */
+    background-color: black;
+    color: aliceblue;
+}
+
+h2 {
+    margin-top: 3rem;
+    font-weight: bolder;
+    text-align: center;
+}
+
+/* nav {
+    border: 2px solid black;
+    margin-top: 0.5px;
+    padding: 0.7rem 0;
+} */
+
+/* a {
+    border-radius: 0.6em;
+    padding: 0.5rem 1rem;
+    border: 2px solid rgb(118, 186, 16);
+    background-color: rgba(0, 128, 0, 0.849);
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: aliceblue;
+    color: black;
+    font-weight: bold;
+    border-color: papayawhip;
+} */
+
+main {
+    min-height: 100%;
+    max-height:max-content;
+}
+
+section {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 5rem 0;
+}
+
+form {
+    background:radial-gradient(papayawhip, rgba(218, 165, 32, 0.2));
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 3rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+form p {
+    text-align: center;
+    width: 50vw;
+    background-color: inherit;
+}
+
+label {
+    background-color: inherit;
+}
+
+form p input {
+    margin: 2rem;
+    font-size: 1.5rem;
+}
+
+input[type="text"]
+{
+    letter-spacing: 0.12rem;
+    padding: 0.4rem;
+    font-family: sans-serif;
+}
+
+form button {
+    border-radius: 0.3em;
+    padding: 0.3rem 1.5rem 0.4rem 1.5rem;
+    color: white;
+    border: 2px solid papayawhip;
+    background-color: black;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.baseLogin__h2 {
+    margin: 0;
+    text-align: left;
+    padding: 2rem 0 0 2rem;
+}
+
+.baseLogin__h2 a {
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 2rem;
+}

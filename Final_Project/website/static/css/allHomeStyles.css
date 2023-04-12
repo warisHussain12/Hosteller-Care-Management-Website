@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Roboto+Mono:ital@0;1&display=swap');
+
+* {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    max-height: max-content;
+    background: linear-gradient(to top, #e8c2ca, papayawhip);
+}
+
+.nav {
+    padding: 1rem;
+    background: linear-gradient(to right, #dda15e 50%, #d4a373 70%, #faedcd 100%);
+    text-align: center;
+}
+
+.nav__a {
+    font-size: 1.4rem;
+    color: black;
+    /* text-decoration: none; */
+    margin-right: 2rem;
+}
+
+.nav__a:hover {
+    text-decoration: none;
+    border: 2px solid inherit;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 0.4rem;
+}
+
+.nav__a:hover:last-child {
+    background-color: firebrick;
+}
+
+.nav__a:visited #records {
+    color: black;
+}
+
+.section1 {
+    display: grid;
+    align-content: center;
+    margin: 0 auto 3rem;
+}
+
+.caption {
+    font-size: 3rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+table, thead, tr {
+    margin: 2rem;
+}
+
+.complaintRecord {
+    margin: 10rem;
+}
+
+.complaint__card {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.complaint__card .complaint__content {
+    background: linear-gradient(to left, aliceblue 10%, whitesmoke 30%, papayawhip 60%);
+    border-radius: 0.4rem;
+    padding: 1.5rem;
+    padding-bottom: 0.5rem;
+    width: min(50%, 900px);
+    height: fit-content;
+    border: 2px solid black;
+}
+
+.messageArea {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: min(20%, 600px);
+}
+
+.messageArea form {
+    gap: 0.7rem;
+}
+
+.messageArea form input {
+    border: 1px solid slateblue;
+    border-width: 0.3px;
+    padding: 0.6rem;
+    width: min(200px, 500px);
+    font-size: 0.9rem;
+    border-color: burlywood;
+}
+
+.messageArea form input:focus {
+    outline: none;
+}
+
+.messageArea form button {
+    padding: 0.3rem;
+    border: 2px solid transparent;
+    background-color: rgba(227, 115, 74, 0.502);
+    border-radius: 0.2rem;
+    font-weight: bold;
+    /* margin-left: -390px; */
+}
+
+.messageHeading {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: underline;
+}
+
+.card__messages {
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    width: min(300px, 600px);
+}
+
+.messagegAuthor a {
+    font-weight: bold;
+    color: rgba(227, 115, 74, 1);
+}
+
+.messagegDate {
+    font-size: 0.7rem;
+}
+
+.complaint__by {
+    letter-spacing: 0.2px;
+    text-decoration: underline;
+    padding-bottom: 1rem;
+    font-weight: 800;
+    font-size: 1.3rem;
+}
+
+.complaint__date {
+    font-size: 0.9rem;
+    padding-top: 1rem;
+    font-style: italic;
+}
+
+.complaint__text {
+    margin: 1rem;
+    margin-bottom: 0;
+    padding-left: 1rem;
+    border-left: 2px solid grey;
+}
+
+.complaint__content .messagetoComplaint {
+    float: right;
+    color: white;
+    padding: 0.1rem 0.5rem;
+    background-color: steelblue;
+    border-radius: 0.3rem;
+    text-decoration: none;
+    font-weight: inherit;
+    font-size: 1rem;
+}
+
+.message__box__button {
+    background-color: steelblue;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+}
+  
+.message__box__popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+.message__box__container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+.message__box__container input[type=text]{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+.message__box__container input[type=text]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.message__box__container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+.message__box__container .cancel {
+    background-color: red;
+}
+
+.message__box__container .btn:hover, .message__box__button:hover {
+    opacity: 1;
+}

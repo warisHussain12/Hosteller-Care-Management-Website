@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Roboto+Mono:ital@0;1&display=swap');
+
+* {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: papayawhip;
+    /* background: linear-gradient(to right, blue
+    , black); */
+}
+
+
+h1 {
+    border-bottom: 2px solid rgb(0, 128, 0);
+    text-align: center;
+    /* background-color: hsla(120, 54%, 46%, 0.696);
+     */
+    background-color: black;
+    color: aliceblue;
+}
+
+h2 {
+    margin-top: 6rem;
+    font-weight: bolder;
+    text-align: center;
+}
+
+nav {
+    border-bottom: 2px solid black;
+    margin-top: 0.5px;
+    padding: 0.7rem 0;
+}
+
+a {
+    border-radius: 0.6em;
+    padding: 0.5rem 1rem;
+    border: 2px solid greenyellow;
+    background-color: rgba(0, 128, 0, 0.849);
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: aliceblue;
+    color: black;
+    font-weight: bold;
+}
+
+main {
+    min-height: 100%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
+}
+
+button {
+    border-radius: 0.5em;
+    /* background-color: rgba(4, 128, 10, 0.667); */
+    background-color: black;
+    color: white;
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: lighter;
+    padding: 0 6rem;
+    margin: 1rem;
+}
+
+button:hover {
+    background-color: yellow;
+    color: black;
+}
+
+section button:hover {
+    background-color: yellow;
+    /* color: black; */
+}
+
+section button a {
+    padding: 0;
+    background-color: inherit;
+    border: 0;
+    color:inherit;
+    font-weight: bolder;
+}
+
+section button a:hover {
+    /* border: none; */
+    background-color: inherit;
+    color: inherit;
+}
+
+/* button:nth-child(2) {
+    padding: 0 6.8rem;
+} */
+

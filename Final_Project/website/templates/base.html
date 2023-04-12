@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}{% endblock title %}
+    </title>
+    {% block stylesheet %}
+    {% endblock stylesheet %}
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <script src="https://kit.fontawesome.com/2a88f63615.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    {% with messages = get_flashed_messages(with_categories=True) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    {% if category=="error" %}
+                        <div id="nav__div">
+                            <p id="nav__p__error">
+                                {{ message }}
+                                <button id="nav__p__error__button">✖</button>
+                            </p>
+                        </div>
+                    {% elif category=="success" %}
+                        <div id="nav__div">
+                            <p id="nav__p__success">
+                                {{ message }}
+                                <button id="nav__p__success__button">✖</button>
+                            </p>
+                        </div>
+                    {% else %}
+                        <div id="nav__div">
+                            <p id="nav__p__default">
+                                {{ message }}
+                            </p>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    {% block header %}
+    {% endblock header %}
+
+    {% block main %}
+    {% endblock main %}
+
+    {% block footer %}
+    {% endblock footer %}
+    <script src="../static/js/main.js"></script>
+</body>
+</html>

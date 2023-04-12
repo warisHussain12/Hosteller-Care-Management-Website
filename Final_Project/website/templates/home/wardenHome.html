@@ -1,0 +1,30 @@
+{% extends "allHomeBase.html" %}
+
+{% block title %}
+    Warden Home Page
+{% endblock title %}
+
+{% block nav %}
+    <a href="/wardenHome" class="nav__a">Home</a>
+    <!-- <a href="#messages" class="nav__a">Messages</a> -->
+    <a href="/logout" class="nav__a">Logout</a>
+{% endblock nav %}
+
+{% block main %}
+    {% for complaint in complaints|reverse %}
+            <section class="complaint__card">
+                <section class="complaint__content">
+                    <p class="complaint__by">
+                        {{complaint.student.registrationId}}
+                        <a class="messagetoComplaint" href="">Mark as Solved</a>
+                    </p>
+                    <p class="complaint__text">
+                        {{complaint.text}}
+                    </p>
+                    <p class="complaint__date">
+                        {{complaint.date_created}}
+                    </p>
+                </section>
+            </section>
+    {% endfor %}
+{% endblock main %}
